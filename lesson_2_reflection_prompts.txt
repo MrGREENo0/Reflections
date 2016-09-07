@@ -11,14 +11,35 @@ What value do you think it offers?
 
 How can you use the staging area to make sure you have one commit per logical
 change?
+	You can compare the staging are to your most recent commit & working directory to see what changes are made between them
+	You can then commit all changes seperately by adding one file at a time to the staging are
+	This allows you to commit one change per commit, assuming you only have one change per file
 
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
+	Situations where you keep the files the "same" but do not want to make it an official change/commit/version
+	Situations such as:
+		- experimentation
+		- different language options (comment language)
+		- different hardware versions that the code is compatible to
+	Branched will help to keep track of these different sutuations without making changes to the other branches
 
 How do the diagrams help you visualize the branch structure?
+	It helps you track what changes are made to the applicable branches, thus it allows you to keep track of the different changes on each branch
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
+	It "Backtracks" all the changes made by both branches up untill the commit that both originates from.
+	Thus all changes made (additions, deletions, etc.) in both instances are"automatically" sorted into one commit at the end of the pipeline of each branch, thus merging the two branches.
+	It is represented as thus because both the branches changes are implemented into one new instance and a new commit is created with two different branch parrents.
 
 What are the pros and cons of Git’s automatic merging vs. always doing merges
 manually?
+	Pros:
+		- simple additions/deletions are done automatically
+		- git highlights out changes made to the same piece of code
+		- saves time
+		- keeps "history of files" intact
+	Cons:
+		- Can not do everything automatically, may require manual input
+		- Can cause possible code breaks (e.g. one brance deleted a variable not used in that instance but are used in the other branch's new code)
